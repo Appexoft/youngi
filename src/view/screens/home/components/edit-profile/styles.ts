@@ -1,0 +1,237 @@
+import { horizontalScale } from "~/constants/metrics";
+import { verticalScale } from "~/constants/metrics";
+import { Platform, StyleSheet } from "react-native";
+import {
+  colors,
+  getColorWithOpacity,
+  radius,
+} from "~/constants/designConstants";
+
+const isIOS = Platform.OS === "ios";
+
+export const styles = StyleSheet.create({
+  container: {
+    width: "100%",
+    height: "100%",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    paddingBottom: verticalScale(40),
+  },
+  containerWrap: {
+    position: "absolute",
+    bottom: 0,
+    width: "100%",
+  },
+  content: {
+    width: "100%",
+    height: 620,
+    backgroundColor: colors.white,
+    borderRadius: radius.large,
+    justifyContent: "flex-start",
+    alignItems: "flex-end",
+  },
+  contentWrapper: {
+    justifyContent: "flex-start",
+    alignItems: "flex-end",
+    paddingTop: verticalScale(28),
+    paddingHorizontal: horizontalScale(30),
+  },
+  contentWrapperHebrew: {
+    justifyContent: "flex-start",
+    alignItems: isIOS ? "flex-end" : "flex-start",
+    paddingTop: verticalScale(28),
+    paddingHorizontal: horizontalScale(30),
+  },
+  title: {
+    marginRight: horizontalScale(-2),
+  },
+  subtitle: {
+    marginTop: verticalScale(10),
+  },
+  photoWrapper: {
+    position: "relative",
+    marginTop: verticalScale(16),
+  },
+  photoUploadedWrapper: {
+    height: 100,
+    width: 100,
+    borderRadius: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+  },
+  photoButton: {
+    position: "absolute",
+    bottom: 5,
+    left: 0,
+    width: 28,
+    height: 28,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 10,
+    backgroundColor: colors.purpleLinear,
+  },
+  row: {
+    marginTop: verticalScale(16),
+    width: "100%",
+  },
+  button: {
+    width: "100%",
+    marginTop: verticalScale(40),
+    marginBottom: verticalScale(20),
+    alignItems: "center",
+  },
+  checkbox: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    marginTop: verticalScale(24),
+  },
+  checkboxText: {
+    marginHorizontal: horizontalScale(5),
+  },
+  checkboxButton: {
+    marginLeft: horizontalScale(8),
+  },
+  checkboxButtonHebrew: {
+    marginLeft: horizontalScale(8),
+  },
+  goToTheMainPage: {
+    marginTop: verticalScale(20),
+  },
+  checkboxContainer: {
+    flexDirection: "row",
+  },
+  checkboxHebrew: {
+    flexDirection: "row-reverse",
+  },
+  deleteAccountButton: {
+    width: "100%",
+    alignItems: "center",
+    marginBottom: verticalScale(50),
+  },
+  containerModal: {
+    alignItems: "center",
+    justifyContent: "flex-start",
+    width: "100%",
+    height: "100%",
+    paddingHorizontal: horizontalScale(24),
+    paddingVertical: verticalScale(100),
+    backgroundColor: colors.white,
+  },
+  menuModalContainer: {
+    width: "100%",
+    height: "100%",
+    backgroundColor: getColorWithOpacity(colors.dark, 0.6),
+    alignItems: "center",
+  },
+  menuModalContent: {
+    width: "100%",
+    height: 400,
+    backgroundColor: colors.white,
+    borderTopLeftRadius: radius.biggest,
+    borderTopRightRadius: radius.biggest,
+    paddingHorizontal: horizontalScale(24),
+    paddingVertical: verticalScale(4),
+  },
+  modalRow: {
+    width: "100%",
+    flexDirection: isIOS ? "row-reverse" : "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    marginTop: verticalScale(24),
+  },
+  modalRowText: {
+    marginLeft: isIOS ? horizontalScale(0) : horizontalScale(8),
+    marginHorizontal: isIOS ? horizontalScale(8) : horizontalScale(0),
+  },
+  circleWrapper: {
+    width: 84,
+    height: 84,
+    justifyContent: "center",
+    alignItems: "center",
+    borderWidth: 4,
+    borderColor: colors.purpleLinear,
+    borderRadius: 50,
+    backgroundColor: colors.white,
+    marginTop: verticalScale(40),
+  },
+  circleInner: {
+    width: 70,
+    height: 70,
+    borderRadius: 41,
+    backgroundColor: colors.purpleLinear,
+  },
+  modalConfirm: {
+    width: "100%",
+    height: "100%",
+    alignItems: "center",
+    position: "relative",
+  },
+  modalConfirmReturn: {
+    position: "absolute",
+    width: 40,
+    height: 40,
+    backgroundColor: colors.white,
+    left: horizontalScale(4),
+    top: verticalScale(24),
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: radius.secondary,
+    shadowColor: "#000000",
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowOpacity: 0.15,
+    shadowRadius: 19.62,
+    elevation: 81,
+  },
+  modalConfirmButtons: {
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: verticalScale(70),
+  },
+  modalConfirmDelete: {
+    flex: 1,
+    height: 60,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: colors.white,
+    borderRadius: radius.main,
+    shadowColor: "#000000",
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowOpacity: 0.09,
+    shadowRadius: 14.62,
+    elevation: 81,
+  },
+  modalConfirmRest: {
+    flex: 1,
+    height: 60,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: colors.purpleLinear,
+    borderRadius: radius.main,
+    marginRight: horizontalScale(16),
+  },
+  emptyContainer: {
+    width: "100%",
+    height: "100%",
+    alignItems: "center",
+    paddingTop: verticalScale(65),
+  },
+  menuModalDeleted: {
+    width: "80%",
+    height: 360,
+    backgroundColor: colors.white,
+    borderRadius: radius.biggest,
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: horizontalScale(24),
+    paddingBottom: verticalScale(28),
+  },
+});

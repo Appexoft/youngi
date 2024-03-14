@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+}
+.card {
+  width: 100px;
+  background-color: #d354ff;
+  height: 200px;
+}
